@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Snake",
+  "description": "A simple snake game that eats HTML elements",
+  "version": "1.1",
+  "browser_action": {
+    "default_title": "Snake Game",
+    "default_icon": "get_started16.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["snake.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

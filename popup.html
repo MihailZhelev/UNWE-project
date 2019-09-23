@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Snake Game</title>
+  <script src="popup.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous">
+  <style>
+    body {
+          width: 220px;
+          height: 100px;
+        }
+        h1{
+          text-align: center;
+        }
+        #settings{
+         margin-left: 20px; 
+         color: #b3b3b3;
+        }
+        #settings:hover{
+          color:#000000;
+        }
+        .hidden{
+          display: none;
+        }
+        input[type=range] {
+          width: 60%
+        }
+      </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row" style="margin-left:0">
+      <h2 class="align-self-center">Web Eater</h2>
+      <a href="#" id="settings" class="align-self-center">
+        <span style="font-size: 1.5em;">
+          <i class="fas fa-cog"></i>
+        </span>
+      </a>
+    </div>
+
+    <div class="hidden" id="hiddenDiv">
+      <div>
+        <input type="color" id="head" name="head" value="#0277bd">
+        <label for="head">Snake Head</label>
+      </div>
+
+      <div>
+        <input type="color" id="body" name="body" value="#4fc3f7">
+        <label for="body">Snake Body</label>
+      </div>
+
+      <div>
+        <label for="body">Level 1 text</label><br>
+        10% <input type="range" id="percentText" name="percentText" value="50" min="10" max="60" step="5"> 60%
+
+      </div>
+    </div>
+
+    <hr>
+    <div class="row justify-content-around">
+      <div class="col flex-grow-0">
+        <button type="button" class="btn btn-info" id="buttonStart">Play</button>
+      </div>
+      <div class="col flex-grow-0">
+        <button type="button" class="btn btn-warning" id="reset">Reset</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-8">
+        <div class="row align-items-center">
+          <div class="col-4">
+              <span style="font-size: 2em; color:#007bff; cursor: pointer;" class="float-left">
+                  <i id="infoIcon" class="fas fa-info-circle"></i>
+              </span>
+          </div>
+          <div class="col-8">
+              <h6 style="margin-bottom: 0px;">Instructions</h6>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="hidden" id="instructions">
+    <hr>
+    <p style="margin-left: 10px;">
+        Use the arrow keys to move. <br></br>
+        Hold down Space Bar to accelerate. <br></br>
+
+        To win the game eat all the webpage elements.
+    </p>
+  </div>
+
+
+</body>
+
+</html>
